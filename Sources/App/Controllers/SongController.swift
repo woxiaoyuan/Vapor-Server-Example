@@ -12,7 +12,7 @@ import Vapor
 struct SongController: RouteCollection {
     //init
     func boot(routes: Vapor.RoutesBuilder) throws {
-        let songs = routes.grouped("songs","**")
+        let songs = routes.grouped("songs")
         songs.get(use: index)
         songs.post(use: create)
         songs.put(use: update)
